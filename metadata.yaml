@@ -1,6 +1,8 @@
 name: astrbot_plugin_quote # 插件唯一识别名，以 astrbot_plugin_ 前缀开头
 display_name: 随机金句 # 用于展示的名字
-desc: 从群精华消息中随机抽取一条金句发送。指令：/金句 # 插件简短描述
-version: v1.0.0 # 插件版本号
-author: YourName # 作者
-repo: https://github.com/YourName/astrbot_plugin_quote # 插件的仓库地址
+desc: 从群精华消息中随机抽取金句，支持单条和多条。指令：金句 或 /金句，可附带数量 # 插件简短描述
+version: v1.2.1 # 插件版本号
+author: 2yd # 作者
+repo: https://github.com/2yd/astrbot_plugin_quote # 插件的仓库地址
+support_platforms:
+  - aiocqhttp

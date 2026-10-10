@@ -1,0 +1,59 @@
+{
+  "max_quotes": {
+    "description": "单次最多抽取的金句数量",
+    "type": "int",
+    "hint": "默认最多 20 条，最少为 1；超出范围时回复数量提示，不调用精华接口。",
+    "default": 20
+  },
+  "invalid_count_message": {
+    "description": "抽取数量不在允许范围时的提示",
+    "type": "text",
+    "hint": "{max_count} 会替换为配置的单次上限。",
+    "default": "抽取数量请填写 1～{max_count}，例如：金句10"
+  },
+  "insufficient_message": {
+    "description": "精华数量少于请求数量时的提示",
+    "type": "text",
+    "hint": "{available} 会替换为实际精华数量，提示放在合并消息的开头。",
+    "default": "群里只有 {available} 条精华，本次全部发送～"
+  },
+  "error_message": {
+    "description": "获取精华消息失败时的提示",
+    "type": "text",
+    "default": "获取精华消息失败，请稍后重试～"
+  },
+  "empty_message": {
+    "description": "群内没有精华消息时的提示",
+    "type": "text",
+    "default": "这个群还没有精华消息哦～"
+  },
+  "fallback_nickname": {
+    "description": "作者昵称为空时的兜底值",
+    "type": "string",
+    "default": "某已退群群友"
+  },
+  "non_text_message": {
+    "description": "没有可展示的文字或图片时的提示",
+    "type": "string",
+    "hint": "图片缺失或处理失败时直接跳过，不显示这段提示。",
+    "default": "[非文本消息]"
+  },
+  "cache_ttl_seconds": {
+    "description": "精华列表缓存时间（秒）",
+    "type": "int",
+    "hint": "默认缓存 30 秒，每次仍重新随机抽取。新增或删除精华可能在缓存到期后才体现；设为 0 关闭缓存。",
+    "default": 30
+  },
+  "request_timeout_seconds": {
+    "description": "获取精华列表的超时时间（秒）",
+    "type": "int",
+    "hint": "最少 1 秒；超时后回复配置的失败提示。",
+    "default": 15
+  },
+  "image_timeout_seconds": {
+    "description": "单张图片处理的超时时间（秒）",
+    "type": "int",
+    "hint": "最少 1 秒；处理失败或超时后跳过该图片，继续发送其余内容。",
+    "default": 10
+  }
+}
